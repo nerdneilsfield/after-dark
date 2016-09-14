@@ -1,0 +1,15 @@
+<p>
+  Published
+  {{ with .Site.Params.author }}
+    by {{ . }}
+  {{ end }}
+  on <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "2 Jan, 2006" }}</time>
+  {{ with .Params.categories }}
+    in {{ delimit (apply (apply (sort .) "partial" "post/category-link" ".") "chomp" ".") ", " " and "}}
+  {{ end }}
+  {{ with .Params.tags }}
+    and tagged {{ delimit (apply (apply (sort .) "partial" "post/tag-link" ".") "chomp" ".") ", " " and " }}
+  {{ end }}
+  using {{ .WordCount }} words
+  for a {{ .ReadingTime }} minute read.
+</p>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ .Hugo.Generator }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ with .Description }}
+      <meta name="description" content="{{ . }}">
+    {{ end }}
+    {{ if .RSSlink }}
+      <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ if (isset .Params "prev") }}
+      <link rel="prev" href="{{ .Params.prev }}">
+    {{ end }}
+    {{ if (isset .Params "next") }}
+      <link rel="next" href="{{ .Params.next }}">
+    {{ end }}
+    {{ partial "favicon" . }}
+    {{ partial "critical-vendor.css" }}
+    {{ partial "critical-custom.css" }}
+  </head>
+  <body class="hack dark main container">
+    <header>{{ block "header" . }}{{ end }}</header>
+    <main>{{ block "main" . }}{{ end }}</main>
+    <footer>{{ block "footer" . }}{{ end }}</footer>
+    {{ template "_internal/google_analytics_async.html" . }}
+  </body>
+</html>

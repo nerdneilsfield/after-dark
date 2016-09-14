@@ -1,0 +1,14 @@
+{{ define "header" }}
+  {{ partial "menu" . }}
+{{ end }}
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <ul>
+    {{ range $key, $value := .Data.Terms }}
+      <li><a href="{{ $key | urlize }}">{{ $key }}</a> {{ len $value }}
+    {{ end }}
+  </ul>
+{{ end }}
+{{ define "footer" }}
+  {{ partial "powered-by" . }}
+{{ end }}

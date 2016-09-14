@@ -1,0 +1,112 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "After Dark"
+license = "MIT"
+licenselink = "https://github.com/comfusion/after-dark/blob/master/LICENSE.md"
+description = "A retro dark theme for Hugo"
+homepage = "https://comfusion.github.io/after-dark/"
+tags = [
+  "blog",
+  "personal",
+  "minimal",
+  "accessible",
+  "responsive",
+  "retro",
+  "dark"
+]
+features = [
+  "html5",
+  "css3",
+  "hack.css",
+  "google analytics",
+  "pagination",
+  "reading time",
+  "word count",
+  "related posts",
+  "section menu",
+  "nojavascript"
+]
+min_version = 0.16
+
+[author]
+  name = "Josh Habdas"
+  homepage = "https://habd.as"
+
+########
+# Copy the following to your config.toml for theme features
+# enableRobotsTXT = true
+# googleAnalytics = ""
+# SectionPagesMenu = "main"
+#
+# [params]
+#   description = ""
+#   author = ""
+#   powered_by = true
+#
+########
+# UX simple retro and good for low-light reading
+# - Page content fades in using brief keyframe animation
+# - Zero JavaScript (okay, except Google Analytics)
+########
+# Customizing
+# - Set your favicon
+# - Change the hack theme
+# - Upgrading hack
+# - Block templates
+# - Set your site description
+# - Disable the Powered By
+# - robots.txt
+# - 404 page
+# - prev and next rel
+# - Creating your menu
+########
+# Then copy archetypes/* to the site archetypes folder
+# - Descriptions provided for all pages (for SEO purposes)
+# - Provide some best practices on description length and wording
+########
+# Taxonomy Terms pages - document
+# - Linked to by RICH METADATA (post content types only)
+########
+# Use of Block Templates
+# - Affords layout inheritance
+# - Helps prevent invalid markup
+########
+# Google Analytics provided using a Hugo-internal template
+# - To use simply add the provided key and assign your tracking code
+########
+# PageSpeed 100 - Desktop and Mobile
+# - Gives a whole new meaning to flying toasters
+# - HTML5, CSS3, No JavaScript
+# - Favicon partial using data URI saves an http request
+########
+# Related posts
+# - Conditionally renders for post
+# - Displays posts containing same tag
+
+######
+# TODO:
+# X Similar posts feature - https://gohugo.io/templates/functions/
+# X Check out the menu stuff in "creating a new theme md"
+# X Confirm RSS is working as expected
+# X Confirm list template works
+# - create archives page (grouped by date)
+# X test <!--more--> verify not wraping p in a p (update, index.html, terms, list)
+# X get them Tags and Categories displaying on posts ONLY
+# X prevent pages from showing up with posts on the homepage
+# X add favicon - https://github.com/yoshiharuyamashita/blackburn/blob/master/layouts/partials/favicon.html
+# X create summary layout with readmore... link (search "delimit .Params.tag" for big hitters)
+# X create 404 page (https://gohugo.io/templates/404/)
+# X set prev and next links (use frontmatter) - see https://github.com/gecampbell/galliard.xyz/blob/2c4a07d9f5fc5fe413b906f5d877ba78bcb2dbab/layouts/partials/head.html
+# - link to feed from homepage, and taxonomies (tags, categories)
+# - check all pages for a meta description (including terms pages) :/
+# - dynamic sitemap
+# - create an install script to copy taxonomy datas?
+# - document the package manifest and make a README - https://github.com/yoshiharuyamashita/blackburn
+# - add post modified (last updated) day and time
+# X Test in Lynx browser before publishing
+# - Add RSS link!!
+# - Set the VERSION number in package.json and tag the repo
+# - Apply LD-data (search "BlogPosting" https://gohugo.io/templates/functions/#strings)
+
+# - document features (check against current theme toml files)

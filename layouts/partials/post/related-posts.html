@@ -1,0 +1,26 @@
+{{ $.Scratch.Set "has_related" false }}
+{{ $page_link := .Permalink }}
+{{ $tags := .Params.tags }}
+{{ range .Site.Pages }}
+  {{ $page := . }}
+  {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+  {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+    {{ $.Scratch.Set "has_related" true }}
+  {{ end }}
+{{ end }}
+{{ if $.Scratch.Get "has_related" }}
+<aside>
+  <header>Related posts</header>
+  <ul>
+    {{ $page_link := .Permalink }}
+    {{ $tags := .Params.tags }}
+    {{ range .Site.Pages }}
+      {{ $page := . }}
+      {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+      {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+        <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a> &ndash; {{ $page.ReadingTime }} minute read
+      {{ end }}
+    {{ end }}
+  </ul>
+</aside>
+{{ end }}

@@ -1,0 +1,36 @@
+<style media="screen">
+  @keyframes intro {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .powered-by {
+    color: rgba(95, 95, 95, 0.78);
+  }
+  main, footer {
+    animation: intro 0.3s both;
+    animation-delay: 0.15s;
+  }
+  /* hack.css overrides and enhancements */
+  .main {
+    padding: 20px 10px;
+  }
+  nav a.active {
+    background-color: #ff2e88;
+    color: #fff;
+  }
+  html {
+    font-size: 13px;
+  }
+  @media screen and (min-width: 768px) {
+    html {
+      font-size: 1em;
+    }
+    .container {
+      max-width: 50rem;
+    }
+  }
+</style>

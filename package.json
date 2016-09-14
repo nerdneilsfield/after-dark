@@ -1,0 +1,36 @@
+{
+  "name": "after-dark",
+  "version": "1.0.0",
+  "description": "A retro dark theme for Hugo",
+  "private": true,
+  "dependencies": {
+    "hack": "0.7.7"
+  },
+  "devDependencies": {
+    "npm-check-updates": "^2.8.0"
+  },
+  "scripts": {
+    "ncu": "npm-check-updates .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comfusion/after-dark.git"
+  },
+  "keywords": [
+    "hugo",
+    "theme",
+    "blog",
+    "minimal",
+    "accessible",
+    "responsive",
+    "retro",
+    "dark"
+  ],
+  "author": "Josh Habdas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comfusion/after-dark/issues"
+  },
+  "homepage": "https://github.com/comfusion/after-dark#readme"
+}

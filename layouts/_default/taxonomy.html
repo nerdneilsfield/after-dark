@@ -1,0 +1,16 @@
+{{ define "header" }}
+  {{ partial "menu" . }}
+{{ end }}
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ range .Data.Pages }}
+    <article>
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <p>{{ .Summary }}</p>
+    </article>
+  {{ end }}
+{{ end }}
+{{ define "footer" }}
+  {{ partial "pagination" . }}
+  {{ partial "powered-by" . }}
+{{ end }}
