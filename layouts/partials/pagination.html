@@ -3,7 +3,7 @@
     {{if .Paginator.HasPrev }}
       <a href="{{ .Paginator.Prev.URL }}">&laquo; Previous</a> |
     {{ end }}
-    <span>Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}</span>
+    <span>第 {{ .Paginator.PageNumber }} 页，共 {{ .Paginator.TotalPages }}页</span>
     {{ if .Paginator.HasNext }}
       | <a href="{{ .Paginator.Next.URL }}">Next &raquo;</a>
     {{ end }}

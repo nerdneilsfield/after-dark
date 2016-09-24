@@ -1,15 +1,15 @@
 <p>
-  Published
+  发布
   {{ with .Site.Params.author }}
-    by {{ . }}
+    者 {{ . }}
   {{ end }}
-  on <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "2 Jan, 2006" }}</time>
+  于 <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date.Format "2 Jan, 2006" }}</time>
   {{ with .Params.categories }}
-    in {{ delimit (apply (apply (sort .) "partial" "post/category-link" ".") "chomp" ".") ", " " and "}}
+    发布于分类 {{ delimit (apply (apply (sort .) "partial" "post/category-link" ".") "chomp" ".") ", " " and "}}
   {{ end }}
   {{ with .Params.tags }}
-    and tagged {{ delimit (apply (apply (sort .) "partial" "post/tag-link" ".") "chomp" ".") ", " " and " }}
+    和标签 {{ delimit (apply (apply (sort .) "partial" "post/tag-link" ".") "chomp" ".") ", " " and " }}
   {{ end }}
-  using {{ .WordCount }} words
-  for a {{ .ReadingTime }} minute read.
+  。使用了 {{ .WordCount }} 字，
+  需要 {{ .ReadingTime }} 分钟阅读.
 </p>

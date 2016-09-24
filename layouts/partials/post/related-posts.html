@@ -10,7 +10,7 @@
 {{ end }}
 {{ if $.Scratch.Get "has_related" }}
 <aside>
-  <header>Related posts</header>
+  <header>相关的文章</header>
   <ul>
     {{ $page_link := .Permalink }}
     {{ $tags := .Params.tags }}
@@ -18,7 +18,8 @@
       {{ $page := . }}
       {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
       {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
-        <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a> &ndash; {{ $page.ReadingTime }} minute read
+        <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a> &ndash; 需要阅读{{ $page.ReadingTime }} 
+分钟
       {{ end }}
     {{ end }}
   </ul>
